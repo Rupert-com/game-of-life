@@ -1,0 +1,11 @@
+.block--active {
+  background-color: blue !important;
+}
+
+.block,
+.block--active {
+  height: 7px;
+  width: 7px;
+  background-color: yellow;
+  border: 0.5px solid #111111;
+}
