@@ -1,5 +1,5 @@
 {
-  "name": "game-of-live",
+  "name": "game-of-life",
   "version": "0.1.0",
   "private": true,
   "main": "src/electron-main.js",
@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "electron": "^18.0.1"
+    "electron": "^18.0.1",
+    "electron-packager": "^15.4.0"
   }
 }

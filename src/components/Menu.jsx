@@ -18,6 +18,9 @@ export default function Menu(props) {
   return (
     <Grid container spacing={2} display='flex' alignItems='center' p={2}>
       <Grid item>
+        <Button href="https://www.google.com/search?q=conway+game+of+life" rel="noopener nofollow">Googles Version</Button>
+        </Grid>
+      <Grid item>
         <BTN onClick={(e) => document.dispatchEvent(startEngine)}>Start</BTN>
       </Grid>
       <Grid item>
