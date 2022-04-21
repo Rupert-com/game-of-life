@@ -1,5 +1,16 @@
 # game-of-life
 
+## start the dev server
+Required is 
+ 1. git
+ 2. node
+ 3. yarn
+
+- clone this repo `git clone https://github.com/Rupert-com/game-of-life.git`
+- cd `cd game-of-life`
+- install all required packages `yarn`
+- start `yarn start`
+
 ## build exec
 
 https://www.npmjs.com/package/electron-packager
