@@ -9,7 +9,8 @@ Required is
 - clone this repo `git clone https://github.com/Rupert-com/game-of-life.git`
 - cd `cd game-of-life`
 - install all required packages `yarn`
-- start `yarn start`
+- start `yarn start` (start the dev http server)
+- start electron `yarn run electron` (start the electron engine)
 
 ## build exec
 
