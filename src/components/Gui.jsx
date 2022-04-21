@@ -14,12 +14,16 @@ function Cell({ active, colIndex, rowIndex, showPopover }) {
     setAnchorEl(undefined)
   }
 
+  const onClick = () => {
+    document.dispatchEvent(new CustomEvent('updateCell', { bubbles: true, detail: { colIndex, rowIndex, updateTo: active ? 0 : 1 } }))
+  }
+
   const id = `${colIndex}${rowIndex}`
 
   const open = Boolean(anchorEl)
   return (
     <>
-      <Box aria-owns={open ? id : undefined} aria-haspopup='true' onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose} className={'block' + (active === 1 ? '--active' : '')} />
+      <Box aria-owns={open ? id : undefined} aria-haspopup='true' onClick={onClick} onMouseEnter={handlePopoverOpen} onMouseLeave={handlePopoverClose} className={'block' + (active === 1 ? '--active' : '')} />
       <Popover
         id={id}
         sx={{

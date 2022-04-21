@@ -59,7 +59,22 @@ export default function Engine(props) {
     setLastRound(() => true)
   }
 
+  const updateCellCallback = (event) => {
+    event.stopImmediatePropagation()
+    setGame((cGame) => {
+      const { colIndex, rowIndex, updateTo } = event.detail
+      const cRow = [...cGame[rowIndex]]
+
+      cRow.splice(colIndex, 1, updateTo)
+      cGame[rowIndex] = cRow
+
+      return cGame
+    })
+    setCalc((c) => c + 1)
+  }
+
   document.addEventListener('resetEngine', engineResetCallback)
+  document.addEventListener('updateCell', updateCellCallback)
 
   const reCalGrid = (cGame) => {
     if (cGame.length !== gridHeight) {
